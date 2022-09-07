@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int *ptr;
+  int limit;
+  int i;
+  int sum;
+  printf("enter limit of array:");
+  scanf("%d",&limit);
+  ptr=(int*)malloc(limit * sizeof(int));
+  for(i=0;i<limit;i++)
+  {
+      printf("enter elements %d:",i+1);
+      scanf("%d\n",(ptr+i));
+  }
+  sum=0;
+  for(i=0;i<limit;i++)
+  {
+      sum=sum+*(ptr+i);
+  }
+  printf("sum of array elements is :%d\n",sum);
+  free(ptr);
+return 0;
+}
+output:-
+enter limit of array:2
+enter elements 1:1
+2
+
+sum of array elements is :3
